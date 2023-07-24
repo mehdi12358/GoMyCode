@@ -1,0 +1,127 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP/8P0gMhW/3YHfppEDLla0",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mehdi12358/GoMyCode/blob/main/Python%20algorithms\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gW424lGsquet",
+        "outputId": "ae0ab9cb-6495-47fc-c218-b69dfaf0af82"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n",
+            "True\n"
+          ]
+        }
+      ],
+      "source": [
+        "def binary_search(arr, target):\n",
+        "    low = 0\n",
+        "    high = len(arr) - 1\n",
+        "\n",
+        "    while low <= high:\n",
+        "        mid = (low + high) // 2\n",
+        "        mid_val = arr[mid]\n",
+        "\n",
+        "        if mid_val == target:\n",
+        "            return True\n",
+        "        elif mid_val < target:\n",
+        "            low = mid + 1\n",
+        "        else:\n",
+        "            high = mid - 1\n",
+        "            return False\n",
+        "print(binary_search([1, 2, 3, 5, 8], 6))\n",
+        "print(binary_search([1, 2, 3, 5, 8], 5))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def power(a, b):\n",
+        "    return a ** b\n",
+        "print(power(3,4))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2tJJJd4ev7JQ",
+        "outputId": "c273ac1f-1d3e-4a50-df6e-cd6418466b6f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "81\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def bubble_sort(arr):\n",
+        "    n = len(arr)\n",
+        "    for i in range(n):\n",
+        "        for j in range(0, n-i-1):\n",
+        "            if arr[j] > arr[j+1]:\n",
+        "                arr[j], arr[j+1] = arr[j+1], arr[j]\n",
+        "\n",
+        "sample_data = [29, 13, 22, 37, 52, 49, 46, 71, 56]\n",
+        "bubble_sort(sample_data)\n",
+        "print(sample_data)  #"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9HT9iiaGxLQD",
+        "outputId": "c867566d-4692-4a99-f533-3e06b29a08e8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[13, 22, 29, 37, 46, 49, 52, 56, 71]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
